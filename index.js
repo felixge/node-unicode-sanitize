@@ -4,8 +4,8 @@ const trailSurrogateStart = 0xdc00;
 const trailSurrogateEnd = 0xdfff;
 const replacement = '\ufffd';
 
-// string sanitizes the given str by replacing invalid unicode code units with
-// the unicode replacement character. Returns a new string.
+// string sanitizes the given str by replacing invalid UTF-16 code unit
+// sequences with the unicode replacement character. Returns a new string.
 exports.string = function(str) {
   var result = '';
   for (var i = 0; i < str.length; i++) {
